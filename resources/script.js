@@ -1,13 +1,32 @@
-//Basic rules work
-//Need to clear form after user input
-//Need to display result for user; right now it's just in console
+//Basic rules work -- DONE
+//Need to clear form after user input -- DONE
 //Need to check input for sneaky words that would turn into swear words
+//Need to make sure input contains letters -- DONE
 
+//Special cases:
+//Name with hyphen; example: Jo-Anne
+//Name with apostrophe; example: Renee'
+//Name with space; example: Mary Beth (which also contains two special letters!)
+//Name with periods; example: J.D.
+
+//Add a tab with the rules of the Name Game
+//Add a link to a video of the song, maybe? Link: https://www.youtube.com/watch?v=5MJLi5_dyn0
 
 const fancyName = () => {
-    //get first name from fprm
+    //get first name from form
     const userInput = document.getElementById('firstName');
     const inputFirstName = userInput.value;
+
+    const legitChars = /^[A-Za-z\s]*$/;
+    if (!legitChars.test(inputFirstName)) {
+        alert('Hmm ... that does not seem like a name.');
+        userInput.value = '';
+        return ;
+    }
+    if (inputFirstName.length === 0) {
+        return ;
+    }
+
     //capitalize first letter, lowercase the rest even if user didn't
     const firstNameFixCaps = inputFirstName.charAt(0).toUpperCase() + inputFirstName.slice(1).toLowerCase();
     //will alter it later; use let instead of const
@@ -48,5 +67,6 @@ const fancyName = () => {
     let result = document.getElementById('result');
     result.innerHTML = lyrics;
     userInput.value = '';
+    
 
 }
