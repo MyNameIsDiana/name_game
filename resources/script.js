@@ -39,9 +39,14 @@ const fancyName = () => {
         moM = 'mo-';
     }  
 
-    const nameGame = `${firstNameFixCaps}, ${firstNameFixCaps}, ${boB}${alteredFirstName}, 
-    Banana-fana ${foF}${alteredFirstName}, 
-    Fee-fi-${moM}${alteredFirstName},
+    const lyrics = `${firstNameFixCaps}, ${firstNameFixCaps}, ${boB}${alteredFirstName}, <br>
+    Banana-fana ${foF}${alteredFirstName}, <br>
+    Fee-fi-${moM}${alteredFirstName}, <br>
     ${firstNameFixCaps}!`;
-    console.log(nameGame)
+    console.log(lyrics);
+
+    let result = document.getElementById('result');
+    result.innerHTML = lyrics;
+    userInput.value = '';
+
 }
