@@ -70,3 +70,59 @@ const fancyName = () => {
     
 
 }
+const ruleDetails = `<p>You can sing "The Name Game" with (almost) every name.</p>
+<p>Sometimes it sounds better if you use a shorter nickname. For example, Penny instead of Penelope.</p>
+<h6>Most cases</h6>
+<p>Unless your name begins with a vowel (A, E, I, O, U, or Y) or one of the special letters (B, F, or M), this is the pattern: </p>
+Sally
+</br>
+Sally, Sally, bo-bally
+</br>
+Banana-fana fo-fally
+</br>
+
+Fee-fi-mo-mally
+</br>
+
+Sally!
+</br><br>
+<p>At the end of every line, the name gets repeated without the first letter; Sally becomes ally.</p>
+<p>If we take (X) as the full name (Sally) and (Y) as the name without the first letter (ally) the verse would look like this:</p>
+(X), (X), bo-b(Y) <br>
+Banana-fana fo-f(Y) <br>
+Fee-fi-mo-m(Y) <br>
+(X)!
+<br><br>
+<h6>The exceptions</h6>
+
+<p>If you have a vowel as the first letter of your name (Alex) you do not truncate the name. 
+The verse looks like this: </p>
+Alex
+<br>
+Alex, Alex, bo-balex
+<br>
+Banana-fana fo-falex
+<br>
+Fee-fi-mo-malex
+<br>
+Alex!
+<br><br>
+
+<pr>If your name starts with one of the special letters -- B, F, or M -- there is a special rule. 
+The line that would "rebuild" the name (bo-billy) is sung without the first letter of the name. 
+The verse for the name Billy looks like this:</p>
+<br>
+Billy
+<br>
+Billy, Billy, bo-illy 
+<br>
+Banana-fana fo-filly 
+<br>
+Fee-fi-mo-milly 
+<br>
+Billy!
+`
+
+
+let theRules = document.getElementById('theRules');
+theRules.innerHTML = ruleDetails;
